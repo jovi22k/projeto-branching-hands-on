@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Nossa Página de Notícias</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nossa Página de Notícias</title>
+  <meta name="description" content="Site mínimo funcional para o trabalho (Jira + GitHub).">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Notícia Urgente!</h1>
-    <p>Um evento importante aconteceu hoje, impactando as estruturas da tecnologia.</p>
-    <footer>© 2025 Nosso Site de Notícias</footer>
+  <header class="topo">
+    <div class="container">
+      <a class="logo" href="#inicio">Notícias</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#artigo">Artigo</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" class="container">
+    <section class="hero">
+      <h1>Notícia Urgente!</h1>
+      <p class="lead">Um evento importante aconteceu hoje, impactando as estruturas da tecnologia.</p>
+      <a class="btn" href="#artigo">Ler artigo</a>
+    </section>
+
+    <section id="artigo" class="card">
+      <h2>Artigo</h2>
+      <p>
+        Este é um conteúdo de exemplo para o trabalho. Você pode editar este parágrafo e duplicar
+        se quiser simular mais texto. O objetivo aqui é garantir um site simples e funcional.
+      </p>
+      <p>
+        Você também pode usar este site como base para demonstrar as tarefas TAR-01 a TAR-04,
+        já que o título, o artigo e o rodapé estão presentes.
+      </p>
+    </section>
+
+    <section id="contato" class="card">
+      <h2>Contato</h2>
+      <form id="contatoForm">
+        <label>
+          <span>Nome</span>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+        </label>
+        <label>
+          <span>E-mail</span>
+          <input type="email" name="email" placeholder="seu@email.com" required>
+        </label>
+        <label>
+          <span>Mensagem</span>
+          <textarea name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+        </label>
+        <button class="btn" type="submit">Enviar</button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <small>© <span id="ano"></span> Nosso Site de Notícias</small>
+      <nav aria-label="Rodapé">
+        <a href="#inicio">Topo</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
